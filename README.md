@@ -73,8 +73,71 @@ The architecture of the system is as follows:
 ### 1. `requirements.txt`
 This file lists all the dependencies required for the project. Install them using:
 
+
+### 2. Producers
+
+The producers generate data streams for both views.
+
+- **`producer_expert.py`**: Produces expert-level data.
+- **`producer_aggregate.py`**: Generates summarized aggregate data.
+
+### 3. Dashboards
+
+These scripts serve the dashboard views for different user requirements.
+
+- **`dashboard_expert.py`**: Displays the expert-level data with detailed insights.
+- **`dashboard_aggregate.py`**: Displays a summarized view for high-level analysis.
+
+### 4. Common File
+
+- **`common.py`**: This file contains shared utilities, configurations, and functions used across the producers and dashboards to ensure consistency and reusability.
+
+## Installation and Setup
+
+### Clone the repository:
 ```sh
+git clone https://github.com/SayeedaBegam/Pipeline_Pioneer_UTN
+cd Pipeline_Pioneer_UTN
+
+sh
+Copy
+Edit
 pip install -r requirements.txt
+Run the producer(s):
+sh
+Copy
+Edit
+python producer_expert.py
+python producer_aggregate.py
+Start the dashboards:
+sh
+Copy
+Edit
+streamlit run dashboard_expert.py
+streamlit run dashboard_aggregate.py
+Usage
+Use the Expert Dashboard for detailed analysis.
+Use the Aggregate Dashboard for an overview of data trends.
+Modify common.py for any shared configurations.
+Contributions
+Feel free to fork the repository and submit pull requests for enhancements.
+
+##References
+-**Redset**: Redset Repository
+-Why TPC is not enough: VLDB 2024 Publication
+##License
+This project is licensed under Pipeline Pioneers@UTN.
+
+pgsql
+Copy
+Edit
+
+This completes your README file in **Markdown** format, ensuring proper formatting for GitHub. You can now **copy and paste** it directly into your `README.md` file. 🚀 Let me know if you need any modifications!
+
+
+
+
+
 
 
 
