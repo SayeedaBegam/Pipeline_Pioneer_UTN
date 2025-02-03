@@ -94,25 +94,25 @@ These scripts serve the dashboard views for different user requirements.
 
 ## Installation and Setup
 ### Clone the repository:
-git clone https://github.com/SayeedaBegam/Pipeline_Pioneer_UTN
-cd Pipeline_Pioneer_UTN
+- git clone https://github.com/SayeedaBegam/Pipeline_Pioneer_UTN
+- cd Pipeline_Pioneer_UTN
 
 ### Install dependencies:
 
-pip install -r requirements.txt
+- pip install -r requirements.txt
 ### Run the producer(s):
-python producer_expert.py
-python producer_aggregate.py
+- python producer_expert.py
+- python producer_aggregate.py
 ###Start the dashboards:
 
-streamlit run common.py
+- streamlit run common.py
 
 ## Contributions
 Feel free to fork the repository and submit pull requests for enhancements.
 
 ## References
--**Redset**: Redset Repository
--Why TPC is not enough: VLDB 2024 Publication
+- **Redset**: Redset Repository
+- Why TPC is not enough: VLDB 2024 Publication
 
 ## License
 This project is licensed under Pipeline Pioneers@UTN.
