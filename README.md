@@ -71,7 +71,7 @@ The architecture of the system is as follows:
 ## Components
 
 ### 1. `requirements.txt`
-This file lists all the dependencies required for the project. Install them using:
+This file lists all the dependencies required for the project.
 
 
 ### 2. Producers
@@ -93,33 +93,26 @@ These scripts serve the dashboard views for different user requirements.
 - **`common.py`**: This file contains shared utilities, configurations, and functions used across the producers and dashboards to ensure consistency and reusability.
 
 ## Installation and Setup
-
 ### Clone the repository:
 ```sh
 git clone https://github.com/SayeedaBegam/Pipeline_Pioneer_UTN
 cd Pipeline_Pioneer_UTN
 
-sh
-Copy
-Edit
+###Install dependencies:
+```sh
 pip install -r requirements.txt
-Run the producer(s):
-sh
-Copy
-Edit
+
+###Run the producer(s):
+```sh
 python producer_expert.py
 python producer_aggregate.py
-Start the dashboards:
-sh
-Copy
-Edit
-streamlit run dashboard_expert.py
-streamlit run dashboard_aggregate.py
-Usage
-Use the Expert Dashboard for detailed analysis.
-Use the Aggregate Dashboard for an overview of data trends.
-Modify common.py for any shared configurations.
-Contributions
+
+###Start the dashboards:
+```sh
+streamlit run common.py
+
+
+##Contributions
 Feel free to fork the repository and submit pull requests for enhancements.
 
 ##References
@@ -128,11 +121,6 @@ Feel free to fork the repository and submit pull requests for enhancements.
 ##License
 This project is licensed under Pipeline Pioneers@UTN.
 
-pgsql
-Copy
-Edit
-
-This completes your README file in **Markdown** format, ensuring proper formatting for GitHub. You can now **copy and paste** it directly into your `README.md` file. 🚀 Let me know if you need any modifications!
 
 
 
