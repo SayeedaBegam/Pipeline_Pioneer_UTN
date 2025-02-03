@@ -94,23 +94,18 @@ These scripts serve the dashboard views for different user requirements.
 
 ## Installation and Setup
 ### Clone the repository:
-```sh
 git clone https://github.com/SayeedaBegam/Pipeline_Pioneer_UTN
 cd Pipeline_Pioneer_UTN
 
 ###Install dependencies:
-```sh
-pip install -r requirements.txt
 
+pip install -r requirements.txt
 ###Run the producer(s):
-```sh
 python producer_expert.py
 python producer_aggregate.py
-
 ###Start the dashboards:
-```sh
-streamlit run common.py
 
+streamlit run common.py
 
 ##Contributions
 Feel free to fork the repository and submit pull requests for enhancements.
