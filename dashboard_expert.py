@@ -212,7 +212,15 @@ def update_tables_periodically():
         if current_max_timestamp > end:
             print('Processing new data...')
 
-            # Query to insert ingestion intervals
+            # The ingestion_intervals_per_table is filled by performing a self left join of the flatten_table_ids table 
+
+            # to find the time difference between two subsequent ingestion queries.
+            
+            # The left join ensures that records where no next arrival timestamp exists yet, are kept. In this case,
+            
+            # the next_timestamp_arrival will be NULL. It considers only records with arrival_timestamps in between start and end,
+            
+            # which are passed as arguments to the query string.
             insert_into_ingestion_intervals_per_table = f"""
                 INSERT INTO ingestion_intervals_per_table (
                     instance_id, 
@@ -237,7 +245,13 @@ def update_tables_periodically():
                     AND t1.arrival_timestamp BETWEEN '{start}' AND '{end}'
             """
 
-            # Query to insert processed data into output_table
+            # In the output_table, all queries are matched to their corresponding ingestion timestamps (last and next).
+
+            # It only considers select queries that reference tables where an insert has run previously and
+            
+            # filters out queries if no ingest query has run previously on the referenced write table (for delete and update) 
+            
+            # or the referenced read table (for select)
             insert_into_output_table = f"""
             INSERT INTO output_table(
                     instance_id,
